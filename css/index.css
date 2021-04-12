@@ -47,7 +47,6 @@ table {
 
 /* END CSS RESET */
 
-
 /* General Styles */
 html {
     font-size: 62.5%;     /* Set 1 rem to be 10px */
@@ -174,14 +173,15 @@ nav {
     background-image: url('../images/tropicals.jpg');
 }
 
+
 footer {
     background-color: #266035;
     display: flex;
     flex-wrap: wrap;
 }
 
-footer h1, h2, h3, p, a, address {
-    color: white;
+footer h1, footer h2, footer h3, footer p, footer a, footer address {
+    color: #FBFFFB;
 }
 footer h2 {
     width: 100%;
@@ -203,4 +203,72 @@ footer p.copyright {
 .left div {
     width: 40%;
     line-height: 2;
+}
+
+
+/* Responsive Styles */
+
+/* Tablet */
+
+@media(max-width: 800px) {
+    #about div {
+        width: 40%;
+    }
+    .shopText div {
+        width: 70%;
+    }
+    .bg-img {
+        height: 40vh;
+    }
+}
+
+/* Phone */
+@media(max-width: 500px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .links {
+        width: 100%;
+    }
+    .logo {
+        width: 25%;
+    }
+    #home button {
+        display: none;
+    }
+    #about {
+        background-image: none;
+        background-color: #e2e3e5;
+        justify-content: center;
+    }
+    #about div {
+        margin-right: 0;
+        width: 80%;
+    }
+    .container {
+        flex-direction: column;        
+        align-items: center;
+    }
+    .bg-img, .shopText {
+        width: 90%;
+    }
+    .mobileSpecific {
+        flex-direction: column-reverse;
+    }
+    .shopText div {
+        width: 100%;
+    }
+    footer p.copyright {
+        text-align: center;
+        margin: 0;
+    }
+    .left div {
+        width: 50%;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
 }
